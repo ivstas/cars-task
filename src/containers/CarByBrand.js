@@ -17,8 +17,16 @@ class CarByBrand extends Component {
         let carsByBrand = this.state.selectedBrand.get("title") !== null
             ? this.state.cars.byBrand(selectedBrand.get("title"))
             : this.state.cars;
-        return <Cars cars={carsByBrand}/>
+        return <Cars cars={carsByBrand} changeFavourite={AddToFavourite}/>
     }
 }
+
+const AddToFavourite = (car) => {
+    if (car.get("isFavourite") === false) {
+        return <a className="addToFavourite" onClick={()=> {car.set({isFavourite: true})}}>add to favourite</a>
+    }
+
+    return null;
+};
 
 export default CarByBrand;

@@ -5,6 +5,7 @@ import CarByBrand from './CarByBrand';
 import FavouriteCars from './FavouriteCars';
 import BrandBar from './BrandBar';
 import Navigation from './Navigation';
+import Statistics from './Statistics';
 
 import { selectedTab } from '../state/ui';
 import { cars } from '../state/index';
@@ -13,7 +14,9 @@ import events from '../events';
 const getComponentForTab = (tabTitle) => {
     switch (tabTitle) {
         case 'statistics':
-            return <main>Statistics</main>;
+            return <main>
+                <Statistics/>
+            </main>;
 
         case 'favourite':
             return <main>

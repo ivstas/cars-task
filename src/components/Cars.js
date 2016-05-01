@@ -1,21 +1,20 @@
 import React from 'react';
 
-const Car = ({id, brand, model, previewImgUrl, isFavourite, setFavourite}) =>
+const Car = ({id, brand, model, previewImgUrl, isFavourite, changeFavourite}) =>
     <li key={id} className={"car " + (isFavourite ? "favourite" : "")}>
         <img src={previewImgUrl}/>
         <div>
             <span className="brand">{brand}</span>
             <span className="model"> {model}</span>
         </div>
-        {isFavourite
-            ? null
-            : <a className="addToFavourite" onClick={setFavourite}> add to favourite</a>}
+        {changeFavourite}
     </li>;
 
-export default ({cars}) => <ul className="carList">
+
+export default ({cars, changeFavourite}) => <ul className="carList">
     {cars.map(car =>
         <Car
             {...car.attributes}
-            setFavourite={()=> {car.set({isFavourite: true})}}
+            changeFavourite={changeFavourite(car)}
         />)}
 </ul>
