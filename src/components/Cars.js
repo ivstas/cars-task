@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Car = ({id, brand, model, previewImgUrl, isFavourite, changeFavourite}) =>
-    <li key={id} className={"car " + (isFavourite ? "favourite" : "")}>
+const Car = ({brand, model, previewImgUrl, isFavourite, changeFavourite}) =>
+    <li className={"car " + (isFavourite ? "favourite" : "")}>
         <img src={previewImgUrl}/>
         <div>
             <span className="brand">{brand}</span>
@@ -13,7 +13,7 @@ const Car = ({id, brand, model, previewImgUrl, isFavourite, changeFavourite}) =>
 
 export default ({cars, changeFavourite}) => <ul className="carList">
     {cars.map(car =>
-        <Car
+        <Car key={car.get('id')}
             {...car.attributes}
             changeFavourite={changeFavourite(car)}
         />)}
