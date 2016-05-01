@@ -34,6 +34,62 @@
       "model": "Focus",
       "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/822/48d2b79ccdae2d0e-main.png",
       "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/4400/000/000/000/c67/48d2aefa100b087d-main.jpg"
+    },
+    {
+      "id": "94da6d50-1370-47af-a82a-a034c6d4e89d",
+      "brand": "Mitsubishi",
+      "model": "Outlander",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/6f6/48d24022f7cc5d7d-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/6ef/48d24a3af7230614-main.jpg"
+    },
+    {
+      "id": "c27bef7c-da59-4d0d-949a-bdb21b6a329b",
+      "brand": "Mitsubishi",
+      "model": "L200",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/81c/48d2b51ea3354c73-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/802/48d2ae11615a9e07-main.jpg"
+    },
+    {
+      "id": "e39bf392-460f-4166-a451-6fe75bc636a4",
+      "brand": "Nissan",
+      "model": "Almera",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/153/48d012e7b6860282-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/148/48d00437d6200dc1-main.jpg"
+    },
+    {
+      "id": "86e713f9-92e1-4d33-b3c8-83766cc1ec8c",
+      "brand": "Nissan",
+      "model": "Teana",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/34b/48d1122328a87ea1-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/304/48d10480fcf7d820-main.jpg"
+    },
+    {
+      "id": "c079bd3f-3dd3-41d7-8458-ae44703382ad",
+      "brand": "Nissan",
+      "model": "Juke",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/4400/000/000/000/2d4/88cda8687b925ca9-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/4400/000/000/000/cc8/88ce7a2947769328-main.jpg"
+    },
+    {
+      "id": "4164c54f-27cd-493b-aab9-28e705348802",
+      "brand": "Ford",
+      "model": "Fiesta",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/7a2/48d2788d34af3fb0-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/775/48d272564b22989f-main.jpg"
+    },
+    {
+      "id": "fbfb9bab-548b-43d7-83e3-cc19bdee5afe",
+      "brand": "Ford",
+      "model": "Kuga",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/122/48cff399b176a506-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/11c/48cfee4413396171-main.jpg"
+    },
+    {
+      "id": "af078b2c-6985-47fa-a3a5-52cf4ed8b004",
+      "brand": "Ford",
+      "model": "Explorer",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/88a/48d2ee9ef5bf6d6d-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/86f/48d2e0516acfb63f-main.jpg"
     }
   ]
 }
