@@ -8,5 +8,5 @@ export default ({favouriteCarCount}) => <nav>
         ? <span className="favouriteCarCount">({favouriteCarCount})</span>
         : null }
     </a>
-    <a onClick={() => router.navigate(pages.statistics, {trigger: true})}>Statistic</a>
+    <a onClick={() => router.navigate(pages.statistics, {trigger: true})}>Statistics</a>
 </nav>

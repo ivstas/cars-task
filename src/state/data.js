@@ -13,7 +13,7 @@ const getBrandsFromCars = (cars) => {
     return brandsTitles.map(title => ({title}));
 };
 
-cars.on('all', () => {
+cars.on('change:brand add remove', () => {
     brands.reset(getBrandsFromCars(cars));
 });
 

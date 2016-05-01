@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Chart from '../components/Highchart';
-
-export default () => React.createElement(Chart, {container: 'statisticsChart', options})
+import { cars } from '../state/data';
 
 const options = {
     chart: {
@@ -23,18 +22,44 @@ const options = {
             pointPadding: 0.2,
             borderWidth: 0
         }
-    },
-    series: [{
-        name: 'Audi',
-        data: [1]
-
-    }, {
-        name: 'Volvo',
-        data: [2]
-
-    }, {
-        name: 'Ford',
-        data: [1]
-
-    }]
+    }
 };
+
+const calculateBrandCount = (cars) => {
+    return cars.favourite().reduce((acc, car) => {
+        let brand = car.get('brand');
+        acc[brand] = (acc[brand] || 0) + 1;
+        return acc;
+    }, []);
+};
+class Statistics extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { favCarCountByBrand: calculateBrandCount(cars)};
+        this.updateCars = () => this.setState({
+            favCarCountByBrand: calculateBrandCount(cars)
+        });
+        cars.on('change:isFavourite add remove', this.updateCars);
+    }
+    componentWillUnmount() {
+        cars.off('change:isFavourite add remove', this.updateCars);
+    }
+    render() {
+        let series = [];
+
+        let favCarCountByBrand = this.state.favCarCountByBrand;
+        for (let brand in favCarCountByBrand) {
+            if (favCarCountByBrand.hasOwnProperty(brand)) {
+                let count = favCarCountByBrand[brand];
+                series.push({name: brand, data: [count]})
+            }
+        }
+
+        return React.createElement(Chart, {
+            container: 'statisticsChart', options: Object.assign({}, options, {series})}
+        )
+    }
+}
+
+
+export default Statistics;
