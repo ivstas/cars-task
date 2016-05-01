@@ -23,10 +23,6 @@ module.exports = {
         }
     },
 
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
-
     module: {
         // todo: review loaders list
         loaders: [
