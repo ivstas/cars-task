@@ -4,8 +4,9 @@ import Car from '../models/car';
 export default Backbone.Collection.extend({
     model: Car,
 
-    byBrand(make) {
-        return this.where({make})
+    byBrand(brand) {
+        //todo: lower case
+        return this.where({brand})
     },
     favourite() {
         return this.where({isFavourite: true})

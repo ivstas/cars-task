@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { cars as carsState } from '../state'
-import CarByMake from './CarByMake';
+import CarByBrand from './CarByBrand';
 import BrandBar from './BrandBar';
 import Navigation from './Navigation';
 
@@ -19,7 +19,7 @@ const getComponentForTab = (tabTitle) => {
         default:
             return <main>
                 <BrandBar/>
-                <CarByMake/>
+                <CarByBrand/>
             </main>;
     }
 };

@@ -4,7 +4,7 @@ import { cars, selectedBrand } from '../state';
 import events from '../events';
 
 
-class CarByMake extends Component {
+class CarByBrand extends Component {
     constructor(props) {
         super(props);
         this.state = { selectedBrand, cars };
@@ -14,11 +14,11 @@ class CarByMake extends Component {
 
     }
     render() {
-        let carsByMake = this.state.selectedBrand.get("title") !== null
+        let carsByBrand = this.state.selectedBrand.get("title") !== null
             ? this.state.cars.byBrand(selectedBrand.get("title"))
             : this.state.cars;
-        return <Cars cars={carsByMake}/>
+        return <Cars cars={carsByBrand}/>
     }
 }
 
-export default CarByMake;
+export default CarByBrand;

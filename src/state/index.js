@@ -4,11 +4,9 @@ import Brand from '../models/Brand';
 
 import testData from './testdata.json'
 
-export const cars = new CarCollection(testData.cars);
-let carToAddLater = {id: '15a5e8ba-7368-4493-8327-9aa87a5ea84d', make: 'bmv', model: 'x3'};
+export const cars = new CarCollection(testData.cars.map(car => Object.assign({}, car, {isFavourite: false})));
 
-setTimeout(() => { cars.get('38b412be-690a-44a1-a6bd-254d6a5d9d1a').set({model: 'cx40'})}, 1000);
-setTimeout(() => { cars.add(carToAddLater)}, 2000);
+setTimeout(() => { cars.get('0cd6de21-f6fa-49a9-8616-7a896004eac2').set({isFavourite: true})}, 1000);
 
 
 export const brands = new BrandCollection([
@@ -22,5 +20,5 @@ export const selectedBrand = new Brand();
 export default {
     cars,
     brands,
-    selectedMake: selectedBrand
+    selectedBrand
 }
