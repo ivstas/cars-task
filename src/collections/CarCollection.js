@@ -6,9 +6,12 @@ export default Backbone.Collection.extend({
 
     byBrand(brand) {
         //todo: lower case
-        return this.where({brand})
+        return this.where({brand});
     },
     favourite() {
-        return this.where({isFavourite: true})
+        return this.where({isFavourite: true});
+    },
+    getFavouriteCarCount() {
+        return this.favourite().length;
     }
 })
