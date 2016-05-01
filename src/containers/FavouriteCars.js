@@ -22,7 +22,7 @@ class FavouriteCars extends Component {
 
 const removeFromFavourite = (car) => {
     if (car.get("isFavourite") === true) {
-        return <a className="removeFromFavourite" onClick={()=> {car.set({isFavourite: false})}}>remove from favourite</a>
+        return <a className="removeFromFavourite" onClick={()=> {car.save({isFavourite: false})}}>remove from favourite</a>
     }
 
     return null;

@@ -20,7 +20,7 @@ class BrandBar extends Component {
     render() {
         return <BrandSelector
             brands={this.state.brands}
-            onBrandSelect={(brandTitle) => selectedBrand.set({title: brandTitle})}/>
+            onBrandSelect={(brandTitle) => selectedBrand.save({title: brandTitle})}/>
     }
 }
 

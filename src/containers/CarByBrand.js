@@ -30,7 +30,7 @@ class CarByBrand extends Component {
 
 const AddToFavourite = (car) => (car.get("isFavourite") === false)
     ? <a className="addToFavourite"
-         onClick={()=> {car.set({isFavourite: true})}}>add to favourite</a>
+         onClick={()=> {car.save({isFavourite: true})}}>add to favourite</a>
     : null;
 
 export default CarByBrand;
