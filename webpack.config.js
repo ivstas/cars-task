@@ -22,15 +22,7 @@ module.exports = {
             {test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/},
             {test: /\.css$/, loaders: ['style', 'css']},
             {test: /\.less$/, loaders: ['style', 'css', 'less']},
-            {test: /\.json/, loaders: ['json']},
-            {test: /\.png$/, loader: 'url?limit=8192&mimetype=image/png'},
-            {test: /\.jpe?g$/, loader: 'url?limit=8192&mimetype=image/jpg'},
-            {test: /\.gif$/, loader: 'url?limit=8192&mimetype=image/gif'},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=image/svg+xml'},
-            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff2'},
-            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff'},
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/octet-stream'},
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
+            {test: /\.json/, loaders: ['json']}
         ]
     },
 
