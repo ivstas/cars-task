@@ -13,14 +13,7 @@ module.exports = {
 
     resolve: {
         root: __dirname,
-        modulesDirectories: ['src', 'node_modules'],
-
-        // todo: review this config
-        // Replace modules with other modules or paths for compatibility or convenience
-        alias: {
-            'React': 'react/addons',
-            'underscore': 'lodash'
-        }
+        modulesDirectories: ['src', 'node_modules']
     },
 
     module: {

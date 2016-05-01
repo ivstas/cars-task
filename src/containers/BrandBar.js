@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BrandSelector from '../components/BrandSelector';
-import {brands, selectedBrand} from '../state';
+import {brands} from '../state/data';
+import { selectedBrand } from '../state/ui';
 
 
 class BrandBar extends Component {

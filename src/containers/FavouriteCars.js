@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cars from '../components/Cars';
-import { cars } from '../state';
+import { cars } from '../state/data';
 
 
 class FavouriteCars extends Component {

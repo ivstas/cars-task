@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import { cars as carsState } from '../state'
 import CarByBrand from './CarByBrand';
 import FavouriteCars from './FavouriteCars';
 import BrandBar from './BrandBar';
@@ -8,7 +7,7 @@ import Navigation from './Navigation';
 import Statistics from './Statistics';
 
 import { selectedTab } from '../state/ui';
-import { cars } from '../state/index';
+import { cars } from '../state/data';
 
 const getComponentForTab = (tabTitle) => {
     switch (tabTitle) {

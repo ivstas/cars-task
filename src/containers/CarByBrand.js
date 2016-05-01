@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cars from '../components/Cars';
-import { cars, selectedBrand } from '../state';
+import { cars } from '../state/data';
+import { selectedBrand } from '../state/ui';
 
 
 class CarByBrand extends Component {
