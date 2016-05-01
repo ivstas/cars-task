@@ -15,6 +15,7 @@ export const brands = new BrandCollection([
     {title: 'lada'}
 ]);
 
+// todo: move to ui state
 export const selectedBrand = new Brand();
 
 export default {

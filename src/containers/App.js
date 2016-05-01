@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import { cars as carsState } from '../state'
 import CarByBrand from './CarByBrand';
+import FavouriteCars from './FavouriteCars';
 import BrandBar from './BrandBar';
 import Navigation from './Navigation';
 
@@ -15,7 +16,9 @@ const getComponentForTab = (tabTitle) => {
             return <main>Statistics</main>;
 
         case 'favourite':
-            return <main>Favourite</main>;
+            return <main>
+                <FavouriteCars/>
+            </main>;
 
         default:
             return <main>
