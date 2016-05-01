@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import CarByBrand from './CarByBrand';
 import FavouriteCars from './FavouriteCars';
 import BrandBar from './BrandBar';
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
 import Statistics from './Statistics';
 
 import { selectedTab } from '../state/ui';
@@ -36,8 +36,18 @@ class App extends Component {
             selectedTabTitle: selectedTab.get('title'),
             favouriteCarCount: cars.getFavouriteCarCount()
         };
-        selectedTab.on('change', () => this.setState({selectedTabTitle: selectedTab.get('title')}));
-        cars.on('change:isFavourite', () => this.setState({favouriteCarCount: cars.getFavouriteCarCount()}))
+        this.updateSelectedTab = () => this.setState({
+            selectedTabTitle: selectedTab.get('title'),
+        });
+        this.updateFavouriteCarCount = () => this.setState({
+            favouriteCarCount: cars.getFavouriteCarCount()
+        });
+        selectedTab.on('change', this.updateSelectedTab);
+        cars.on('change:isFavourite', this.updateFavouriteCarCount)
+    }
+    componentWillUnmount() {
+        selectedTab.off('change', this.updateSelectedTab);
+        cars.off('change:isFavourite', this.updateFavouriteCarCount)
     }
     render() {
         return <div className="container">

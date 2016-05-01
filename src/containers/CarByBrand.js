@@ -7,15 +7,21 @@ import { selectedBrand } from '../state/ui';
 class CarByBrand extends Component {
     constructor(props) {
         super(props);
-        this.state = { selectedBrand, cars };
+        this.state = { cars, selectedBrandTitle: selectedBrand.get('title') };
 
-        cars.on('all', () => { this.setState({ cars })});
-        selectedBrand.on('all', () => { this.setState({ selectedBrand }) });
+        this.updateCars = () => { this.setState({cars})};
+        this.updateSelectedBrand = () => { this.setState({selectedBrandTitle: selectedBrand.get('title')})};
 
+        cars.on('all', this.updateCars);
+        selectedBrand.on('all', this.updateSelectedBrand);
+    }
+    componentWillUnmount() {
+        cars.off('all', this.updateCars);
+        selectedBrand.off('all', this.updateSelectedBrand);
     }
     render() {
-        let carsByBrand = this.state.selectedBrand.get("title") !== null
-            ? this.state.cars.byBrand(selectedBrand.get("title"))
+        let carsByBrand = this.state.selectedBrandTitle !== null
+            ? this.state.cars.byBrand(this.state.selectedBrandTitle)
             : this.state.cars;
         return <Cars cars={carsByBrand}
                      changeFavourite={AddToFavourite}/>
