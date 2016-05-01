@@ -13,13 +13,13 @@ export const pages = {
 const Routes =  Backbone.Router.extend({
     routes: pages,
     cars: function() {
-       selectedTab.save({title: 'cars'})
+       selectedTab.set({title: 'cars'})
     },
     favourite: function() {
-        selectedTab.save({title: 'favourite'})
+        selectedTab.set({title: 'favourite'})
     },
     statistics: function () {
-        selectedTab.save({title: 'statistics'})
+        selectedTab.set({title: 'statistics'})
     }
 });
 

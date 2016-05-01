@@ -11,10 +11,11 @@ const Car = ({brand, model, previewImgUrl, isFavourite, changeFavourite}) =>
     </li>;
 
 
-export default ({cars, changeFavourite}) => <ul className="carList">
+export default ({cars, favouriteCars, changeFavourite}) => <ul className="carList">
     {cars.map(car =>
         <Car key={car.get('id')}
-            {...car.attributes}
-            changeFavourite={changeFavourite(car)}
+             {...car.attributes}
+             isFavourite={favouriteCars.contains(car)}
+             changeFavourite={changeFavourite(car)}
         />)}
 </ul>

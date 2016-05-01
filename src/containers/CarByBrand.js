@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cars from '../components/Cars';
-import { cars } from '../state/data';
+import { cars, favouriteCars } from '../state/data';
 import { selectedBrand } from '../state/ui';
 
 
@@ -24,13 +24,14 @@ class CarByBrand extends Component {
             ? this.state.cars.byBrand(this.state.selectedBrandTitle)
             : this.state.cars;
         return <Cars cars={carsByBrand}
+                     favouriteCars={favouriteCars}
                      changeFavourite={AddToFavourite}/>
     }
 }
 
-const AddToFavourite = (car) => (car.get("isFavourite") === false)
+const AddToFavourite = (car) => (!favouriteCars.contains(car))
     ? <a className="addToFavourite"
-         onClick={()=> {car.save({isFavourite: true})}}>add to favourite</a>
+         onClick={()=> {favouriteCars.add(car); Backbone.sync('update', favouriteCars)}}>add to favourite</a>
     : null;
 
 export default CarByBrand;

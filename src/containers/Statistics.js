@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Chart from '../components/Highchart';
-import { cars } from '../state/data';
+import { favouriteCars } from '../state/data';
 
 const options = {
     chart: {
@@ -26,7 +26,7 @@ const options = {
 };
 
 const calculateBrandCount = (cars) => {
-    return cars.favourite().reduce((acc, car) => {
+    return cars.reduce((acc, car) => {
         let brand = car.get('brand');
         acc[brand] = (acc[brand] || 0) + 1;
         return acc;
@@ -35,14 +35,14 @@ const calculateBrandCount = (cars) => {
 class Statistics extends Component {
     constructor(props) {
         super(props);
-        this.state = { favCarCountByBrand: calculateBrandCount(cars)};
+        this.state = { favCarCountByBrand: calculateBrandCount(favouriteCars)};
         this.updateCars = () => this.setState({
-            favCarCountByBrand: calculateBrandCount(cars)
+            favCarCountByBrand: calculateBrandCount(favouriteCars)
         });
-        cars.on('change:isFavourite add remove', this.updateCars);
+        favouriteCars.on('all', this.updateCars);
     }
     componentWillUnmount() {
-        cars.off('change:isFavourite add remove', this.updateCars);
+        favouriteCars.off('all', this.updateCars);
     }
     render() {
         let series = [];

@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Statistics from './Statistics';
 
 import { selectedTab } from '../state/ui';
-import { cars } from '../state/data';
+import { favouriteCars } from '../state/data';
 
 const getComponentForTab = (tabTitle) => {
     switch (tabTitle) {
@@ -34,20 +34,20 @@ class App extends Component {
         super(props);
         this.state = {
             selectedTabTitle: selectedTab.get('title'),
-            favouriteCarCount: cars.getFavouriteCarCount()
+            favouriteCarCount: favouriteCars.size()
         };
         this.updateSelectedTab = () => this.setState({
             selectedTabTitle: selectedTab.get('title'),
         });
         this.updateFavouriteCarCount = () => this.setState({
-            favouriteCarCount: cars.getFavouriteCarCount()
+            favouriteCarCount: favouriteCars.size()
         });
         selectedTab.on('change', this.updateSelectedTab);
-        cars.on('change:isFavourite', this.updateFavouriteCarCount)
+        favouriteCars.on('add remove', this.updateFavouriteCarCount)
     }
     componentWillUnmount() {
         selectedTab.off('change', this.updateSelectedTab);
-        cars.off('change:isFavourite', this.updateFavouriteCarCount)
+        favouriteCars.off('add remove', this.updateFavouriteCarCount)
     }
     render() {
         return <div className="container">
