@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { cars as carsState } from '../state'
 import CarByMake from './CarByMake';
 import BrandBar from './BrandBar';
-import Header from './Header';
+import Navigation from './Navigation';
 
 import { selectedTab } from '../state/ui';
 import events from '../events';
@@ -33,10 +33,12 @@ class App extends Component {
         events.listenTo(selectedTab, 'all', () => this.setState({selectedTabTitle: selectedTab.get('title')}))
     }
     render() {
-        return <div>
-            <Header/>
+        return <div className="container">
+            <header>
+                <Navigation/>
+            </header>
+
             {getComponentForTab(this.state.selectedTabTitle)}
-            <footer>footer</footer>
         </div>
     }
 }

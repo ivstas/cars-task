@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({brands, onBrandSelect, selectedBrandTitle}) => <ul>
+export default ({brands, onBrandSelect, selectedBrandTitle}) => <ul className="brandSelector">
     {brands.map(brand => {
             let brandTitle = brand.get("title");
             let isSelected = brandTitle === selectedBrandTitle;

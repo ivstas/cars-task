@@ -32,6 +32,8 @@ module.exports = {
         loaders: [
             {test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/},
             {test: /\.css$/, loaders: ['style', 'css']},
+            {test: /\.less$/, loaders: ['style', 'css', 'less']},
+            {test: /\.json/, loaders: ['json']},
             {test: /\.png$/, loader: 'url?limit=8192&mimetype=image/png'},
             {test: /\.jpe?g$/, loader: 'url?limit=8192&mimetype=image/jpg'},
             {test: /\.gif$/, loader: 'url?limit=8192&mimetype=image/gif'},

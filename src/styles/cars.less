@@ -1,0 +1,17 @@
+@import 'common';
+
+ul.brandSelector {
+  display: flex;
+  padding: @spacing;
+  background: @clrBright;
+  color: white;
+}
+ul.brandSelector > li {
+  .clickable();
+}
+ul.brandSelector > li:hover {
+  text-decoration: underline;
+}
+ul.brandSelector > li:not(:last-child) {
+  margin-right: 1rem;
+}

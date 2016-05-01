@@ -1,0 +1,39 @@
+{
+  "cars": [
+    {
+      "id": "49eee4c3-26e3-450b-90a2-ab38884d08de",
+      "brand": "Audi",
+      "model": "a4",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/887/48d2e91fc970ab43-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/873/48d2e06224f66ab9-main.jpg"
+    },
+    {
+      "id": "90acfb5f-fdcb-4008-a3b3-cda73765ad0d",
+      "brand": "Audi",
+      "model": "TT",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/49f/48d195664a4a7e6b-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/499/48d1937c6f2f44a6-main.jpg"
+    },
+    {
+      "id": "0cd6de21-f6fa-49a9-8616-7a896004eac2",
+      "brand": "Volvo",
+      "model": "s60",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/3840/000/000/002/33a/88cd170a49a5abf0-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/4400/000/000/000/bcb/48d065a8a8fb2596-main.jpg"
+    },
+    {
+      "id": "debe144c-1854-4722-a6d7-6f5ac2104dbe",
+      "brand": "Ford",
+      "model": "Mondeo",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/6d9/48d23363121c6fb8-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/0000/000/000/000/662/48d22de25e096032-main.jpg"
+    },
+    {
+      "id": "7248f5cf-ed0b-4f5e-9a45-562a7478e5e2",
+      "brand": "Ford",
+      "model": "Focus",
+      "previewImgUrl": "https://img-c.drive.ru/models.icons/0000/000/000/000/822/48d2b79ccdae2d0e-main.png",
+      "fullImageUrl": "https://img-c.drive.ru/models.large.main.images/4400/000/000/000/c67/48d2aefa100b087d-main.jpg"
+    }
+  ]
+}
