@@ -37,9 +37,8 @@ class App extends Component {
             selectedTabTitle: selectedTab.get('title'),
             favouriteCarCount: cars.getFavouriteCarCount()
         };
-        selectedTab.on('all', () => this.setState({selectedTabTitle: selectedTab.get('title')}));
-        // todo: listen only for fav attr change in model
-        cars.on('all', () => this.setState({favouriteCarCount: cars.getFavouriteCarCount()}))
+        selectedTab.on('change', () => this.setState({selectedTabTitle: selectedTab.get('title')}));
+        cars.on('change:isFavourite', () => this.setState({favouriteCarCount: cars.getFavouriteCarCount()}))
     }
     render() {
         return <div className="container">
